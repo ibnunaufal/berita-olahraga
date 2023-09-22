@@ -17,6 +17,23 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions "default"
+    productFlavors{
+        free {
+            applicationId "com.naufall.beritaolahraga.free"
+            resValue "string", "app_name", "Free - Berita Olahraga"
+            resValue "colors", "main_color", "#D390CC" // tambahkan warna disini
+            versionCode 1
+            versionName "0.0.1"
+        }
+        paid {
+            applicationId "com.naufall.beritaolahraga.paid"
+            resValue "string", "app_name", "Paid - Berita Olahraga"
+            resValue "colors", "main_color", "#BC49B1" // tambahkan warna disini
+            versionCode 1
+            versionName "0.0.1"
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
